@@ -16,6 +16,11 @@ class PointsMaterialDescriptor extends MaterialDescriptorBase {
       default: 1,
     });
 
+    this.hasProp('map', {
+      type: propTypeInstanceOf(THREE.Texture),
+      default: null,
+    });
+
     this.hasProp('sizeAttenuation', {
       type: PropTypes.bool,
       update(threeObject, sizeAttenuation, existsInProps) {

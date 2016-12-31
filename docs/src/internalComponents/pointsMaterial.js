@@ -9,7 +9,10 @@ class pointsMaterial extends MaterialInfo {
     return {
       ...super.getAttributesText(),
       transparent: '',
+      map: '',
+      blending: '',
       alphaTest: '',
+      depthTest: '',
       side: '',
       opacity: '',
       visible: '',

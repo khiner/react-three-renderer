@@ -31,6 +31,22 @@ class MaterialDescriptorBase extends THREEElementDescriptor {
       simple: true,
     });
 
+    this.hasProp('blending', {
+      type: PropTypes.oneOfType([
+        propTypeInstanceOf(THREE.NormalBlending),
+        propTypeInstanceOf(THREE.AdditiveBlending),
+        propTypeInstanceOf(THREE.SubtractiveBlending),
+        propTypeInstanceOf(THREE.MultiplyBlending),
+        propTypeInstanceOf(THREE.CustomBlending),
+      ]),
+      default: THREE.NormalBlending,
+    })
+
+    this.hasProp('depthTest', {
+      type: PropTypes.bool,
+      default: false,
+    })
+
     this.hasProp('alphaTest', {
       type: PropTypes.number,
       updateInitial: true,
